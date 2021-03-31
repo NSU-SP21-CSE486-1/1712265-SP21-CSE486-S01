@@ -2,19 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
     <TextView
-        android:id="@+id/text_header_reply"
+        android:id="@+id/text_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
-        android:text=
-            "@string/text_header_reply"
+        android:text="@string/text_header"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -22,26 +22,25 @@
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
-        android:visibility="invisible"/>
+        app:layout_constraintVertical_bias="0.022" />
 
     <TextView
-        android:id= "@+id/text_message_reply"
+        android:id="@+id/text_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_header_reply"
-        android:visibility="invisible"/>
+        app:layout_constraintTop_toBottomOf="@+id/text_header" />
 
     <Button
-        android:id="@+id/button_main"
+
+        android:id="@+id/button_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="launchSecondActivity"
-        android:text="@string/button_main"
+        android:onClick="returnReply"
+        android:text="@string/button_second"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.911"
@@ -50,19 +49,22 @@
         app:layout_constraintVertical_bias="0.976" />
 
     <EditText
-        android:id="@+id/editText_main"
+        android:id="@+id/editText_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:ems="10"
-        android:hint="@string/editText_main"
+        android:hint="@string/editText_second"
         android:inputType="textLongMessage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.079"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
