@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string-array name="spinnerDeptName">
+    <string name="app_name">SpinnerTest</string>
+
+    <string-array name="DeptName">
         <item>School of Business and Economics</item>
         <item>School of Humanities and Social Science</item>
         <item>School of Engineering and Physical Science</item>

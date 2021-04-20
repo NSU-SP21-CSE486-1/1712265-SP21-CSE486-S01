@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Practice</string>
+
+    <string name="Name">This is shakib </string>
+    <string name="Age">24</string>
+    <string name="LargeText">Add another activity with advanced search feature. This activity allows you to filter students matching a set of criteria extracted from the above input. You have the flexibility to decide how you want to implement this search feature. Add another activity with advanced search feature. This activity allows you to filter students matching a set of criteria extracted from the above input. You have the flexibility to decide how you want to implement this search feature.Add another activity with advanced search feature \n\nThis activity allows you to filter students matching a set of criteria extracted from the above input. You have the flexibility to decide how you want to implement this search featureAdd another activity with advanced search feature. This activity allows you to filter students matching a set of criteria extracted from the above input. You have the flexibility to decide how you want to implement this search feature..</string>
 </resources>
