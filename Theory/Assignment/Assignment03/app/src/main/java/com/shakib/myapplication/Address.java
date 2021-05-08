@@ -28,14 +28,26 @@ public class Address extends AppCompatActivity {
 
         datePicker = findViewById(R.id.datePickerId);
         currentDate = findViewById(R.id.currentDateTextViewID);
+
+
         currentDate.setText(currentDateGenerator());
+
+//        selectButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                currentDate.setText(currentDateGenerator());
+//            }
+//        });
+
+
+
 
         imageview= findViewById(R.id.imageViewnext);
 
         imageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Address.this, SchoolActivity.class);
+                Intent intent = new Intent(Address.this, Numbers.class);
                 startActivity(intent);
 
             }
