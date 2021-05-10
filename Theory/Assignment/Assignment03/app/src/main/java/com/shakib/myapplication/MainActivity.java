@@ -7,6 +7,7 @@ import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private ImageView imageview;
+    private Button firebaseConnectButton;
 
 
 
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         imageview= findViewById(R.id.imageViewnext);
+        firebaseConnectButton = findViewById(R.id.firebsaeConnectButtonId);
+
 
 
 
@@ -33,6 +37,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SchoolActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        firebaseConnectButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FIrebaseLogin.class);
                 startActivity(intent);
 
             }
