@@ -37,12 +37,12 @@ public class Numbers extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if( validMobile(nidNumber.getText().toString())){
+                if( validMobile(number.getText().toString())){
 
                 }
                 else {
 
-                    nidNumber.setError("Invalid Mobile Number");
+                    number.setError("Invalid Mobile Number");
                 }
 
             }
@@ -62,7 +62,7 @@ public class Numbers extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if( validMobile(nidNumber.getText().toString())){
+                if( validNidNumber(nidNumber.getText().toString())){
 
                 }
                 else {
