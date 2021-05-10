@@ -4,22 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Location">
-
-    <TextView
-        android:id="@+id/TopTextParmanentAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_green_dark"
-        android:textColorHighlight="@color/black"
-        android:layout_marginTop="45dp"
-        android:text="Permanent Address"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    tools:context=".PresentLocation">
 
     <EditText
         android:id="@+id/editTextTextPersonName12"
@@ -36,19 +21,22 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPostalAddress" />
 
     <TextView
-        android:id="@+id/permanentHouseID"
+        android:id="@+id/presentHouseID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="10dp"
         android:text="House/Village :"
-        android:textSize="20dp"
         android:textColor="@android:color/holo_green_light"
         android:textColorHighlight="@color/black"
+        android:textSize="20dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/presentRoadID"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName12"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/presentPostCodeID" />
+        app:layout_constraintTop_toBottomOf="@+id/presentPostCodeID"
+        app:layout_constraintVertical_bias="0.382" />
 
     <TextView
         android:id="@+id/presentPostCodeID"
@@ -61,25 +49,26 @@
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPostalAddress"
-        app:layout_constraintHorizontal_bias="0.716"
+        app:layout_constraintHorizontal_bias="0.689"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/permanentPoliceStationID" />
+        app:layout_constraintTop_toBottomOf="@+id/presentPoliceStationID" />
 
     <TextView
         android:id="@+id/presentRoadID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginBottom="192dp"
         android:text="Road/Block :"
         android:textColor="@android:color/holo_green_light"
         android:textColorHighlight="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName14"
-        app:layout_constraintHorizontal_bias="0.153"
+        app:layout_constraintHorizontal_bias="0.725"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/permanentHouseID" />
+        app:layout_constraintTop_toBottomOf="@+id/presentPostCodeID"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/editTextTextPersonName14"
@@ -94,6 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.741" />
+
 
     <EditText
         android:id="@+id/editTextTextPersonName11"
@@ -124,21 +114,21 @@
         app:layout_constraintVertical_bias="0.348" />
 
     <TextView
-        android:id="@+id/permanentPoliceStationID"
+        android:id="@+id/presentPoliceStationID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="12dp"
         android:text="Police Station :"
         android:textColor="@android:color/holo_green_light"
         android:textColorHighlight="@color/black"
         android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/presentPostOfficeID" />
 
     <TextView
-        android:id="@+id/permanentPostOfficeID"
+        android:id="@+id/presentPostOfficeID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="248dp"
@@ -167,7 +157,7 @@
         app:layout_constraintVertical_bias="0.243" />
 
     <TextView
-        android:id="@+id/permanentDistrictID"
+        android:id="@+id/presentDistrictID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="172dp"
@@ -196,7 +186,7 @@
         app:layout_constraintVertical_bias="0.131" />
 
     <TextView
-        android:id="@+id/PermanentCountryID"
+        android:id="@+id/presentCountryID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -234,5 +224,18 @@
         app:layout_constraintVertical_bias="0.864"
         app:srcCompat="@drawable/rightarrow" />
 
+    <TextView
+        android:id="@+id/TopTextPresentAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_green_dark"
+        android:textColorHighlight="@color/black"
+        android:layout_marginTop="45dp"
+        android:text="Present Address"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

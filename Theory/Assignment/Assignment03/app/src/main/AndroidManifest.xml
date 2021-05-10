@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".Location"></activity>
+        <activity android:name=".PresentLocation"></activity>
+        <activity android:name=".Location" />
         <activity android:name=".Numbers" />
         <activity android:name=".Address" />
         <activity android:name=".SchoolActivity" />
