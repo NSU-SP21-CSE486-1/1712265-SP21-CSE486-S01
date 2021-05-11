@@ -106,8 +106,8 @@ public class FIrebaseLogin extends AppCompatActivity implements View.OnClickList
                 progressBar.setVisibility(View.GONE);
                 if (task.isSuccessful())
                 {
-                   Intent intent = new Intent(getApplicationContext(),StudentList.class);
-                   startActivity(intent);
+//                   Intent intent = new Intent(getApplicationContext(),StudentList.class);
+//                   startActivity(intent);
                 }
                 else {
                     Toast.makeText(getApplicationContext(),"Login Unsuccesfull",Toast.LENGTH_SHORT).show();

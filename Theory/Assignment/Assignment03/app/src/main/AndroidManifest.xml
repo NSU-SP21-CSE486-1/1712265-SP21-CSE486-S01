@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".Data"></activity>
         <activity android:name=".StudentList" />
         <activity android:name=".FirebaseSignup" />
         <activity android:name=".FIrebaseLogin" />

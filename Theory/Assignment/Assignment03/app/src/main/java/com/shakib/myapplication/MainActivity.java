@@ -11,6 +11,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -21,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView imageview;
     private Button firebaseConnectButton;
+    private Button submitButton;
+
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
 
 
 
@@ -33,16 +41,35 @@ public class MainActivity extends AppCompatActivity {
         nsuidEditText = findViewById(R.id.editTextNsuId);
 
         imageview= findViewById(R.id.imageViewnext);
+
+        submitButton= findViewById(R.id.submitButtonID);
         firebaseConnectButton = findViewById(R.id.firebsaeConnectButtonId);
 
 
 
 
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // saveData();
+
+            rootNode = FirebaseDatabase.getInstance();
+            reference = rootNode.getReference("students");
+
+                String name = nameEditText.getText().toString();
+                 String  id =  nsuidEditText.getText().toString();
+
+           DataSet DatasetForStudent = new DataSet(name,id);
+
+            reference.child(id).setValue(DatasetForStudent);
+
+            }
+        });
 
         imageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                saveData();
+
 
                 Intent intent = new Intent(MainActivity.this, SchoolActivity.class);
                 startActivity(intent);
@@ -63,9 +90,5 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-    private void saveData() {
-        String name = nameEditText.getText().toString();
-        String  id =  nsuidEditText.getText().toString();
 
-    }
 }
