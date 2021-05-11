@@ -1,33 +1,14 @@
 package com.shakib.myapplication;
 
 public class DataSet {
+String schoolNameSpinner,deptNameSpinner;
 
-    private String name;
-
-    private String id;
-
-    public DataSet(String name, String id) {
-        this.name = name;
-        this.id = id;
+    public DataSet(String schoolNameSpinner, String deptNameSpinner) {
+        this.schoolNameSpinner = schoolNameSpinner;
+        this.deptNameSpinner = deptNameSpinner;
     }
 
-    public DataSet() {
 
-    }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 }

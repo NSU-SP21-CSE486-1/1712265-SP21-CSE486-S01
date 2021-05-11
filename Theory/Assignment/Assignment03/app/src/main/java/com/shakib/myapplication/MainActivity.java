@@ -56,12 +56,13 @@ public class MainActivity extends AppCompatActivity {
             rootNode = FirebaseDatabase.getInstance();
             reference = rootNode.getReference("students");
 
-                String name = nameEditText.getText().toString();
-                 String  id =  nsuidEditText.getText().toString();
-
-           DataSet DatasetForStudent = new DataSet(name,id);
-
-            reference.child(id).setValue(DatasetForStudent);
+//                String name = nameEditText.getText().toString();
+//                 String  id =  nsuidEditText.getText().toString();
+//                String schoolNameSpinner = nameEditText.getText().toString();
+//                String  deptNameSpinner =  nsuidEditText.getText().toString();
+//
+//           DataSet DatasetForStudent = new DataSet(name,id,schoolNameSpinner,deptNameSpinner);
+//           reference.child(id).setValue(DatasetForStudent);
 
             }
         });

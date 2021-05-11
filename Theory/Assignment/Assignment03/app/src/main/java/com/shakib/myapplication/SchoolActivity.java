@@ -9,6 +9,10 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +20,11 @@ import java.util.List;
 public class SchoolActivity extends AppCompatActivity {
 
     private Spinner schoolNames , deptNames;
+    private Spinner schoolNameSpinner , deptNamesSpinner;
 
-//    String[] spinner;
+
+
+       String schoolSpinnerValue, deptSpinnerValue;
 
     ArrayList<String> subCatagories = new ArrayList<>();
     ArrayAdapter<String> arrayAdapter_schoolNames;
@@ -27,6 +34,9 @@ public class SchoolActivity extends AppCompatActivity {
     ArrayAdapter<String> arrayAdapter_deptnames;
 
     private ImageView imageview;
+
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,8 +104,13 @@ public class SchoolActivity extends AppCompatActivity {
                     arrayAdapter_deptnames = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_health);
                 }
 
+
+
+
                 deptNames.setAdapter(arrayAdapter_deptnames);
             }
+
+
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -111,8 +126,22 @@ public class SchoolActivity extends AppCompatActivity {
         imageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //spinner.setSpinner(schoolNames.getSelectedItem().toString());
+
+                rootNode = FirebaseDatabase.getInstance();
+                reference = rootNode.getReference("students");
+                String schoolNameSpinner,deptNameSpinner;
+
+                schoolSpinnerValue = schoolNames.getSelectedItem().toString();
+                deptSpinnerValue = deptNames.getSelectedItem().toString();
+
+                DataSet DatasetForStudent = new DataSet(schoolSpinnerValue,deptSpinnerValue);
+                reference.child(schoolSpinnerValue).setValue(DatasetForStudent);
+
                 Intent intent = new Intent( SchoolActivity.this,Address.class);
                 startActivity(intent);
+
+
 
             }
         });
