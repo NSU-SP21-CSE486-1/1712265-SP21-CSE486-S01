@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -102,9 +103,14 @@ public class FIrebaseLogin extends AppCompatActivity implements View.OnClickList
         mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                progressBar.setVisibility(View.GONE);
                 if (task.isSuccessful())
                 {
-                    
+                   Intent intent = new Intent(getApplicationContext(),StudentList.class);
+                   startActivity(intent);
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"Login Unsuccesfull",Toast.LENGTH_SHORT).show();
                 }
             }
         });

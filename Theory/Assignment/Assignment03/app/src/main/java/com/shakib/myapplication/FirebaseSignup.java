@@ -104,15 +104,15 @@ public class FirebaseSignup extends AppCompatActivity implements View.OnClickLis
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressbar.setVisibility(View.GONE);
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(),"Register is successfull",Toast.LENGTH_SHORT);
+                            Toast.makeText(getApplicationContext(),"Register is successfull",Toast.LENGTH_SHORT).show();
 
                         } else {
                            if (task.getException() instanceof FirebaseAuthUserCollisionException)
                            {
-                               Toast.makeText(getApplicationContext(),"User is already Registered ", Toast.LENGTH_SHORT);
+                               Toast.makeText(getApplicationContext(),"User is already Registered ", Toast.LENGTH_SHORT).show();
                            }
                             else {
-                               Toast.makeText(getApplicationContext(), "Register is not successfull", Toast.LENGTH_SHORT);
+                               Toast.makeText(getApplicationContext(), "Register is not successfull", Toast.LENGTH_SHORT).show();
                            }
                         }
 
