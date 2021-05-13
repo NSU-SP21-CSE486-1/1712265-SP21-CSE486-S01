@@ -2,13 +2,17 @@ package com.shakib.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -23,20 +27,34 @@ public class SchoolActivity extends AppCompatActivity {
     private Spinner schoolNameSpinner , deptNamesSpinner;
 
 
+    DataSet dataset ;
 
-       String schoolSpinnerValue, deptSpinnerValue;
+    private EditText nameEditText;
+    private EditText nsuidEditText;
 
-    ArrayList<String> subCatagories = new ArrayList<>();
+    private EditText singinEmail;
+
+    private EditText singinPassword;
+
+    private TextView test;
+
+    private ImageView imageview;
+
+
+
+
+
+       ArrayList<String> subCatagories = new ArrayList<>();
     ArrayAdapter<String> arrayAdapter_schoolNames;
 
 
     ArrayList<String> arrayList_Economics, arrayList_Humanities, arrayList_Engineering, arrayList_health;
     ArrayAdapter<String> arrayAdapter_deptnames;
 
-    private ImageView imageview;
 
-    FirebaseDatabase rootNode;
-    DatabaseReference reference;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +63,18 @@ public class SchoolActivity extends AppCompatActivity {
 
         schoolNames = findViewById(R.id.spinnerId);
         deptNames = findViewById(R.id.spinnerDepartmentId);
+        nsuidEditText = findViewById(R.id.editTextNsuId);
 
         imageview= findViewById(R.id.imageViewnext);
+
+        test = findViewById(R.id.testingEditText);
+
+        nameEditText = findViewById(R.id.nameId);
+        nsuidEditText = findViewById(R.id.editTextNsuId);
+        singinEmail = findViewById(R.id.singInEmailId);
+        singinPassword = findViewById(R.id.signInPasswordID);
+
+
 
         ArrayList<String> Catagories = new ArrayList<>();
         Catagories.add("School of Business and Economics");
@@ -60,9 +88,6 @@ public class SchoolActivity extends AppCompatActivity {
         schoolNames.setAdapter(arrayAdapter_schoolNames);
 
 
-
-
-//        Deptnames process starts(child Spinner)
 
         arrayList_Economics = new ArrayList<>();
         arrayList_Economics.add("Accounting & Finance");
@@ -92,23 +117,40 @@ public class SchoolActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(position== 0){
+
                     arrayAdapter_deptnames = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_Economics);
+
+
+
                 }
                 if(position== 2){
-                    arrayAdapter_deptnames = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_Engineering);
+                        arrayAdapter_deptnames = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_Engineering);
+
                 }
                 if(position== 1){
                     arrayAdapter_deptnames = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_Humanities);
+
+
                 }
                 if(position== 3){
                     arrayAdapter_deptnames = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item,arrayList_health);
+
                 }
+
+
 
 
 
 
                 deptNames.setAdapter(arrayAdapter_deptnames);
+
+
+
+//                String text2 = deptNames.getSelectedItem().toString();
+//                Toast.makeText(getApplicationContext(),text2,Toast.LENGTH_SHORT).show();
+
             }
+
 
 
 
@@ -122,62 +164,32 @@ public class SchoolActivity extends AppCompatActivity {
 
 
 
-
         imageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //spinner.setSpinner(schoolNames.getSelectedItem().toString());
-
-                rootNode = FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("students");
-                String schoolNameSpinner,deptNameSpinner;
-
-                schoolSpinnerValue = schoolNames.getSelectedItem().toString();
-                deptSpinnerValue = deptNames.getSelectedItem().toString();
-
-                DataSet DatasetForStudent = new DataSet(schoolSpinnerValue,deptSpinnerValue);
-                reference.child(schoolSpinnerValue).setValue(DatasetForStudent);
 
                 Intent intent = new Intent( SchoolActivity.this,Address.class);
                 startActivity(intent);
 
+                String text2 = deptNames.getSelectedItem().toString();
+
+                String text = schoolNames.getSelectedItem().toString();
+                //Toast.makeText(getApplicationContext(),text2,Toast.LENGTH_SHORT).show();
 
 
+                SharedPreferences schoolName = getSharedPreferences("schoolNameKey", MODE_PRIVATE);
+                SharedPreferences deptName = getSharedPreferences("deptNameKey",MODE_PRIVATE);
+                SharedPreferences.Editor editor = schoolName.edit();
+                SharedPreferences.Editor editorid = deptName.edit();
+
+                editor.putString("schoolName", schoolNames.getSelectedItem().toString());
+                editor.putString("DeptName", deptNames.getSelectedItem().toString());
+                editor.apply();
             }
         });
 
 
 
-
-
-
-
-//
-//        ArrayAdapter<String> adapter_1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, Catagories);
-//
-//        adapter_1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        schoolNames.setAdapter(adapter_1);
-//
-//        schoolNames.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                if(adapterView.getItemAtPosition(i).equals("School of Business and Economics"))
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//
-//            }
-//        });
-
-
-
-
-//        spinner = getResources().getStringArray(R.array.DeptName);
-//        schoolNames = findViewById(R.id.spinnerId);
-//
-//        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this, R.layout.spinnerview,R.id.SpinnerTextView,spinner);
-//        schoolNames.setAdapter(spinnerAdapter);
 
 
 

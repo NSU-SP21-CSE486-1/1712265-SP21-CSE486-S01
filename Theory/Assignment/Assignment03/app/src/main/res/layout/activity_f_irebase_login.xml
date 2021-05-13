@@ -40,10 +40,37 @@
         android:layout_marginLeft="135dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="100dp"
-
-
-
         android:text="Login" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRemembermeID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:text="Remember me !! " />
+
+
+    <Button
+        android:id="@+id/savedSingInButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="100dp"
+
+
+
+
+        android:text="Load Last Login" />
+
+
+
+
+
+
+
+
+
 
     <ProgressBar
         android:layout_width="wrap_content"
@@ -59,7 +86,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="60dp"
         android:text="Not Registered ? SIGN UP" />
+
+
 
 </LinearLayout>

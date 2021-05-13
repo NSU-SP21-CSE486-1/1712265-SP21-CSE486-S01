@@ -1,14 +1,15 @@
 package com.shakib.myapplication;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 public class DataSet {
-String schoolNameSpinner,deptNameSpinner;
 
-    public DataSet(String schoolNameSpinner, String deptNameSpinner) {
-        this.schoolNameSpinner = schoolNameSpinner;
-        this.deptNameSpinner = deptNameSpinner;
+
+
+
+
+
+
+
     }
-
-
-
-
-}

@@ -2,7 +2,9 @@ package com.shakib.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
@@ -18,6 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText nameEditText;
@@ -29,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
+
+    DataSet dataset ;
+
 
 
 
@@ -48,6 +55,17 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+        //String name = nameEditText.getText().toString().trim();
+
+       // String value = nameEditText.getText().toString().trim();
+
+        //editor.commit();
+
+
+
+
+
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
             rootNode = FirebaseDatabase.getInstance();
             reference = rootNode.getReference("students");
 
-//                String name = nameEditText.getText().toString();
-//                 String  id =  nsuidEditText.getText().toString();
-//                String schoolNameSpinner = nameEditText.getText().toString();
-//                String  deptNameSpinner =  nsuidEditText.getText().toString();
-//
-//           DataSet DatasetForStudent = new DataSet(name,id,schoolNameSpinner,deptNameSpinner);
-//           reference.child(id).setValue(DatasetForStudent);
+                String name = nameEditText.getText().toString();
+                 String  id =  nsuidEditText.getText().toString();
+                String schoolNameSpinner = nameEditText.getText().toString();
+                String  deptNameSpinner =  nsuidEditText.getText().toString();
+
+         //  DataSet DatasetForStudent = new DataSet(name,id);
+          // reference.child(id).setValue(DatasetForStudent);
 
             }
         });
@@ -70,6 +88,20 @@ public class MainActivity extends AppCompatActivity {
         imageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
+
+
+
+                SharedPreferences name = getSharedPreferences("nameKey", MODE_PRIVATE);
+                SharedPreferences id = getSharedPreferences("idKey", MODE_PRIVATE);
+                SharedPreferences.Editor editor = name.edit();
+                SharedPreferences.Editor editorid = id.edit();
+
+                editor.putString("valueName", nameEditText.getText().toString());
+                editor.putString("valueId", nsuidEditText.getText().toString());
+                editor.apply();
 
 
                 Intent intent = new Intent(MainActivity.this, SchoolActivity.class);
