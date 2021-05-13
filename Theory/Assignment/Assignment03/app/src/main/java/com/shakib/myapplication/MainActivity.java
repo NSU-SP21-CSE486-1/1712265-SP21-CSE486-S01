@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
     private ImageView imageview;
     private Button firebaseConnectButton;
-    private Button submitButton;
+
 
     FirebaseDatabase rootNode;
     DatabaseReference reference;
 
-    DataSet dataset ;
+
 
 
 
@@ -49,35 +49,16 @@ public class MainActivity extends AppCompatActivity {
 
         imageview= findViewById(R.id.imageViewnext);
 
-        submitButton= findViewById(R.id.submitButtonID);
         firebaseConnectButton = findViewById(R.id.firebsaeConnectButtonId);
 
 
 
 
-        submitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               // saveData();
 
-            rootNode = FirebaseDatabase.getInstance();
-            reference = rootNode.getReference("students");
-
-                String name = nameEditText.getText().toString();
-                 String  id =  nsuidEditText.getText().toString();
-                String schoolNameSpinner = nameEditText.getText().toString();
-                String  deptNameSpinner =  nsuidEditText.getText().toString();
-
-
-            }
-        });
 
         imageview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
 
 
 
@@ -97,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        
         firebaseConnectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
