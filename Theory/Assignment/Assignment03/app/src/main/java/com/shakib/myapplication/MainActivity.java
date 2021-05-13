@@ -55,17 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-        //String name = nameEditText.getText().toString().trim();
-
-       // String value = nameEditText.getText().toString().trim();
-
-        //editor.commit();
-
-
-
-
-
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,8 +68,6 @@ public class MainActivity extends AppCompatActivity {
                 String schoolNameSpinner = nameEditText.getText().toString();
                 String  deptNameSpinner =  nsuidEditText.getText().toString();
 
-         //  DataSet DatasetForStudent = new DataSet(name,id);
-          // reference.child(id).setValue(DatasetForStudent);
 
             }
         });

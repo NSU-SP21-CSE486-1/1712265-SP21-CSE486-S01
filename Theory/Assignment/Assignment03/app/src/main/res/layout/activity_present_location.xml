@@ -57,7 +57,7 @@
         android:id="@+id/presentRoadID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="192dp"
+        android:layout_marginBottom="176dp"
         android:text="Road/Block :"
         android:textColor="@android:color/holo_green_light"
         android:textColorHighlight="@color/black"
@@ -65,10 +65,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName14"
-        app:layout_constraintHorizontal_bias="0.725"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/presentPostCodeID"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/editTextTextPersonName14"
@@ -228,10 +226,10 @@
         android:id="@+id/TopTextPresentAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_green_dark"
-        android:textColorHighlight="@color/black"
         android:layout_marginTop="45dp"
         android:text="Present Address"
+        android:textColor="@android:color/holo_green_dark"
+        android:textColorHighlight="@color/black"
         android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
