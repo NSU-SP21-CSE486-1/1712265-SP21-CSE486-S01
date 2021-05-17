@@ -1,38 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SecondActivity">
-
-    <TextView
-        android:id="@+id/text_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/text_header"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <TextView
-        android:id="@+id/text_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_header" />
 
     <Button
 
@@ -66,5 +40,42 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
 
+    <Button
+        android:id="@+id/riceID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RICE"
+        android:textStyle="bold"
+        android:layout_marginLeft="120dp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/cheeseID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHEESE"
+        android:textStyle="bold"
+        android:layout_marginLeft="120dp"
+        />
+
+    <Button
+        android:id="@+id/appleID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="APPLE"
+        android:textStyle="bold"
+        android:layout_marginLeft="120dp"
+        />
+
+    <Button
+        android:id="@+id/mangoID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MANGO"
+        android:textStyle="bold"
+        android:layout_marginLeft="120dp"
+        />
+
+
+
+</LinearLayout>

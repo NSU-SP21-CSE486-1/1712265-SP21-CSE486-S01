@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "664122279176",
+    "project_id": "assignment03-921f5",
+    "storage_bucket": "assignment03-921f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664122279176:android:fd357e8791c07b256758bd",
+        "android_client_info": {
+          "package_name": "com.shakib.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664122279176-avjnc9q3mkmt79kf7p9voh1atoe4c2aq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANDbyxRw25RBunIGEs1P-TwUnXocYVuFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664122279176-avjnc9q3mkmt79kf7p9voh1atoe4c2aq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

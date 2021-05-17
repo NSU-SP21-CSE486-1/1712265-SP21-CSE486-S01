@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FIrebaseLogin">
+
+
+    <EditText
+        android:id="@+id/singInEmailId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Email"
+         />
+
+    <EditText
+        android:id="@+id/signInPasswordID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:hint="Password"
+
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/sinInButtonID"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="100dp"
+        android:text="Login" />
+
+    <CheckBox
+        android:id="@+id/checkBoxRemembermeID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="110dp"
+        android:text="Remember me !! " />
+
+
+    <Button
+        android:id="@+id/savedSingInButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="100dp"
+
+
+
+
+        android:text="Load Last Login" />
+
+
+
+
+
+
+
+
+
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/progressbarID"
+        android:layout_gravity="center"
+
+        />
+
+    <TextView
+        android:id="@+id/signUpTextViewID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="60dp"
+        android:text="Not Registered ? SIGN UP" />
+
+
+
+</LinearLayout>
