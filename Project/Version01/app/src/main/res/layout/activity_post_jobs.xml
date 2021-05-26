@@ -75,12 +75,12 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/studentNameIsD"
+                android:id="@+id/jobTitleID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:gravity="center"
-                android:hint="Enter student name"
+                android:hint="Job title"
                 android:inputType="textPersonName"
                 android:text="" />
 
@@ -94,8 +94,8 @@
                 android:textStyle="bold" />
 
             <Spinner
-                android:id="@+id/spinnerId"
-
+                android:id="@+id/jobTypespinnerId"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="28dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -223,6 +223,7 @@
 
 
             <Button
+                android:id="@+id/submitJobpostID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"

@@ -83,11 +83,7 @@ public class Location extends AppCompatActivity {
                 String valueDept = name.getString("DeptName","");
 
 
-//
-//        Toast.makeText(getApplicationContext(),valueName.toString(),Toast.LENGTH_SHORT).show();
-//        Toast.makeText(getApplicationContext(),valueId.toString(),Toast.LENGTH_SHORT).show();
-//        Toast.makeText(getApplicationContext(),valueSchool.toString(),Toast.LENGTH_SHORT).show();
-//        Toast.makeText(getApplicationContext(),valueDept.toString(),Toast.LENGTH_SHORT).show();
+
 
 
                 databaseReference = FirebaseDatabase.getInstance().getReference();
@@ -98,7 +94,11 @@ public class Location extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(),"Submit Complete!!",Toast.LENGTH_SHORT).show();
 
-//
+////
+////        Toast.makeText(getApplicationContext(),valueName.toString(),Toast.LENGTH_SHORT).show();
+////        Toast.makeText(getApplicationContext(),valueId.toString(),Toast.LENGTH_SHORT).show();
+////        Toast.makeText(getApplicationContext(),valueSchool.toString(),Toast.LENGTH_SHORT).show();
+////        Toast.makeText(getApplicationContext(),valueDept.toString(),Toast.LENGTH_SHORT).show();
 
 
 
