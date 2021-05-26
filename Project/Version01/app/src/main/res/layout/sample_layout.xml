@@ -67,7 +67,7 @@
                 />
 
             <TextView
-                android:id="@+id/jobTitleViewID"
+                android:id="@+id/jobtypeID"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="5dp"
                 android:drawableStart="@drawable/ic_baseline_business_center_24"

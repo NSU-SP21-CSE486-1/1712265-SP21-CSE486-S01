@@ -51,7 +51,7 @@ public class postJobs extends AppCompatActivity implements  AdapterView.OnItemSe
         submit= findViewById(R.id.submitJobpostID);
 
 
-            databaseReference = FirebaseDatabase.getInstance().getReference("Jobs");
+
             jobType.setOnItemSelectedListener(this);
             //Creating the ArrayAdapter instance having the country list
             ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,jobtypes);
@@ -98,7 +98,7 @@ public class postJobs extends AppCompatActivity implements  AdapterView.OnItemSe
 
 
 
-                    databaseReference = FirebaseDatabase.getInstance().getReference();
+                    databaseReference = FirebaseDatabase.getInstance().getReference("JOBS");
 
                     String key = databaseReference.push().getKey();
 //                    (String jobTitle, String jobtype, String location, String salary, String deadline, String interviewdate, String jobinformation, String otherbenefits) {

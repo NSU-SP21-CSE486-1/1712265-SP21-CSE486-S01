@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NSUCPC">
-        <activity android:name=".sendCV"></activity>
+        <activity android:name=".fullJobPreview"></activity>
+        <activity android:name=".sendCV" />
         <activity android:name=".editJobs" />
         <activity android:name=".postJobs" />
         <activity android:name=".addStudentInfo" />

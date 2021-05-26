@@ -36,15 +36,17 @@ public class CustomAdapter extends ArrayAdapter<DataSet> {
 
         TextView salary = view.findViewById(R.id.salaryViewID);
 
-        TextView title = view.findViewById(R.id.jobTitleViewID);
+        TextView title = view.findViewById(R.id.showJobTitleID);
 
         TextView deadline = view.findViewById(R.id.deadlineViewID);
+        TextView type = view.findViewById(R.id.jobtypeID);
 
 
 
         location.setText(dataSet.getLocation());
         salary.setText(dataSet.getSalary());
         title.setText(dataSet.getJobTitle());
+        type.setText(dataSet.getJobtype());
         deadline.setText(dataSet.getDeadline());
 
 

@@ -1,6 +1,9 @@
 package com.shakib.nsucpc;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -29,11 +32,22 @@ public class AvailableJobs extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_available_jobs);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("Jobs");
+        databaseReference = FirebaseDatabase.getInstance().getReference("JOBS");
         dataSetList= new ArrayList<>();
         customAdapter = new CustomAdapter(AvailableJobs.this,dataSetList);
 
         listView = findViewById(R.id.listviewID);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                // TODO Auto-generated method stub
+                Intent intent = new Intent(AvailableJobs.this, fullJobPreview.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

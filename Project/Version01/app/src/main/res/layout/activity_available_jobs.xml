@@ -66,8 +66,7 @@
         android:id="@+id/listviewID"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/purple_500"
-        android:dividerHeight="1dp"
+
         >
 
 
