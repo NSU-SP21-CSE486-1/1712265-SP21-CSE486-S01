@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NSUCPC">
-        <activity android:name=".adminOptions"></activity>
+        <activity android:name=".sendCV"></activity>
+        <activity android:name=".editJobs" />
+        <activity android:name=".postJobs" />
+        <activity android:name=".addStudentInfo" />
+        <activity android:name=".adminOptions" />
         <activity android:name=".AvailableJobs" />
         <activity android:name=".adminLogin" />
         <activity android:name=".studentLogin" />

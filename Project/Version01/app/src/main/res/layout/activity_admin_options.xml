@@ -78,6 +78,7 @@
             >
 
             <LinearLayout
+                android:id="@+id/addStudentinfoID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#D9D9DC"
@@ -132,6 +133,7 @@
             >
 
             <LinearLayout
+                android:id="@+id/postNewJobID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#D9D9DC"
@@ -184,6 +186,7 @@
             >
 
             <LinearLayout
+                android:id="@+id/editJobPostID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#D9D9DC"
@@ -237,6 +240,7 @@
             >
 
             <LinearLayout
+                android:id="@+id/sendCVtoCompanyID"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#D9D9DC"
