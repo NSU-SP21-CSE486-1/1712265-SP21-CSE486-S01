@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "15238835719",
+    "project_id": "nsu-cpc-4959c",
+    "storage_bucket": "nsu-cpc-4959c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15238835719:android:4eb3d5b33a6e39876cc4a2",
+        "android_client_info": {
+          "package_name": "com.shakib.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15238835719-bau7qja6ig8292a57c9uu3gg3srcactj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDjB1PemKmAdfTd1Ycy5d4G3iTT9Fck58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15238835719-bau7qja6ig8292a57c9uu3gg3srcactj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15238835719:android:14ef99457db487046cc4a2",
+        "android_client_info": {
+          "package_name": "com.shakib.nsucpc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15238835719-bau7qja6ig8292a57c9uu3gg3srcactj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDjB1PemKmAdfTd1Ycy5d4G3iTT9Fck58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15238835719-bau7qja6ig8292a57c9uu3gg3srcactj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

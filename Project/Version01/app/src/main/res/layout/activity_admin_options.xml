@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".adminOptions">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#95552C"
+        >
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/nuslogo"
+            />
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="Hello,"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:id="@+id/studentNameID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Student name"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+
+            />
+
+        <ImageView
+            android:id="@+id/menibarID"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/menu"
+            android:layout_gravity="right"
+
+            />
+
+
+
+    </LinearLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="0dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D9D9DC"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add new student info"
+                    android:textColor="@color/black"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:shadowDx="90"
+                    android:shadowDy="0"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Here you can create new student info"
+                    android:textColor="#AEABAB"
+                    android:textSize="15dp"
+                    />
+
+                <ImageButton
+
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/follow" />
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D9D9DC"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Post new job"
+                    android:textColor="@color/black"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:shadowDx="90"
+                    android:shadowDy="0"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Here you can create new job post"
+                    android:textColor="#AEABAB"
+                    android:textSize="15dp"
+                    />
+
+                <ImageButton
+
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/writing" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D9D9DC"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Check/Edit current job posts"
+                    android:textColor="@color/black"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:shadowDx="90"
+                    android:shadowDy="0"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Here you can see/edit everything for job posts"
+                    android:textColor="#AEABAB"
+                    android:textSize="15dp"
+                    />
+
+                <ImageButton
+
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/edit" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#D9D9DC"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send CVs to company"
+                    android:textColor="@color/black"
+                    android:outlineSpotShadowColor="@color/white"
+                    android:shadowDx="90"
+                    android:shadowDy="0"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Here you can filter job posts before sending them to company"
+                    android:textColor="#AEABAB"
+                    android:textSize="14dp"
+                    />
+
+                <ImageButton
+
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+
+                    android:layout_marginTop="10dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/clipboard" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>
+
+
+</LinearLayout>

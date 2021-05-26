@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1C1B1B"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="10dp"
+    tools:context=".SplashScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/nuslogo"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#95552C"
+            android:textStyle="bold"
+            android:text="North South University"
+            android:textSize="20dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#95552C"
+            android:textStyle="bold"
+            android:text="Career &amp; Placement Center"
+            android:textSize="10dp"
+            />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="60dp"
+
+        app:srcCompat="@drawable/portfolio" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NSU CPC"
+        android:layout_marginTop="0dp"
+
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:textColor="#95552C"
+        />
+
+   >
+    <TextView
+        android:id="@+id/splasjh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="3dp"
+        android:text="Carrer &amp; Placement Center"
+        android:textColor="#95552C"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+    <ProgressBar
+        android:id="@+id/progreeBarID"
+        android:progressTint="@android:color/white"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+       android:layout_marginTop="300dp"
+        android:layout_marginBottom="10dp"
+        android:text="Developed &amp; Mantainced by Office Of NSU "
+/>
+</LinearLayout>

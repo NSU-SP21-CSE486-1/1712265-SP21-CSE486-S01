@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:background="#95552C"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            app:srcCompat="@drawable/nuslogo"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+
+            android:shadowColor="@android:color/white"
+
+            android:text="North South University"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+
+            android:shadowColor="@android:color/white"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAlignment="center"
+
+            android:text="Career &amp; Placement Center"
+            android:textSize="10dp"
+            />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="0dp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/studentButtonId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#D9D9DC"
+                    android:gravity="center_vertical"
+                    android:padding="10dp">
+
+                    <ImageButton
+
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="294dp"
+                        android:layout_marginTop="9dp"
+                        android:maxHeight="100dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/studentlogo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="280dp"
+                        android:layout_marginTop="100dp"
+                        android:text="Student Login"
+                        android:textColor="#95552C"
+
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardCornerRadius="15dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#D9D9DC"
+                    android:gravity="center_vertical"
+                    android:padding="0dp">
+
+                    <ImageButton
+                        android:id="@+id/adminButtonId"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="302dp"
+                        android:layout_marginTop="1dp"
+                        android:maxHeight="100dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/adminlogo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="100dp"
+                        android:layout_marginLeft="290dp"
+                        android:textColor="#95552C"
+                        android:textStyle="bold"
+
+                        android:text="Admin Login"
+                        android:textSize="20dp"
+                        />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>
+
+
+
+
+
+
