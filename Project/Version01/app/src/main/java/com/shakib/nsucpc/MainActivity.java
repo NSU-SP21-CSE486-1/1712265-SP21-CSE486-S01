@@ -1,21 +1,18 @@
 package com.shakib.nsucpc;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
 //    private ImageButton studentButton;
     private RelativeLayout adminButton;
     private RelativeLayout studentButton;
+    private Object v;
 
 
     @Override
@@ -45,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
 
 
     }

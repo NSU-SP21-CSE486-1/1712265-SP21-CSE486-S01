@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:text="Location"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="15dp"
                 />
 
             <TextView
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:text="Location"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="15dp"
                 />
 
             <TextView
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:text="Location"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="15dp"
                 />
 
             <TextView
@@ -89,7 +89,15 @@
                 android:layout_height="wrap_content"
                 android:text="Location"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="15dp"
+                />
+            <TextView
+                android:id="@+id/keyID"
+                android:visibility="invisible"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="Location"
+
                 />
 
 

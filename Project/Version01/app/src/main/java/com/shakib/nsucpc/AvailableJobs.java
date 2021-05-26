@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +28,11 @@ public class AvailableJobs extends AppCompatActivity {
 
     private List<DataSet> dataSetList;
     private  CustomAdapter customAdapter;
+    private EditText jobTitile;
+    private TextView key;
+
+
+
 
 
     @Override
@@ -38,14 +46,22 @@ public class AvailableJobs extends AppCompatActivity {
 
         listView = findViewById(R.id.listviewID);
 
+        key = findViewById(R.id.keyID);
+
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // TODO Auto-generated method stub
+                String contactId = ((TextView) view.findViewById(R.id.keyID)).getText().toString();
+
+
+                Toast.makeText(getApplicationContext(),contactId, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(AvailableJobs.this, fullJobPreview.class);
                 startActivity(intent);
+
             }
         });
     }
@@ -58,6 +74,7 @@ public class AvailableJobs extends AppCompatActivity {
                 dataSetList.clear();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
                     DataSet dataSet = dataSnapshot1.getValue(DataSet.class);
+                    String myParentKey = dataSnapshot1.getKey().toString();
                     dataSetList.add(dataSet);
                 }
                 listView.setAdapter(customAdapter);

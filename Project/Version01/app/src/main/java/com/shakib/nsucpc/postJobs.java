@@ -100,11 +100,12 @@ public class postJobs extends AppCompatActivity implements  AdapterView.OnItemSe
 
                     databaseReference = FirebaseDatabase.getInstance().getReference("JOBS");
 
-                    String key = databaseReference.push().getKey();
-//                    (String jobTitle, String jobtype, String location, String salary, String deadline, String interviewdate, String jobinformation, String otherbenefits) {
 
-                        DataSet dataSet = new DataSet(jobTitle,spinnervalue,Location,Salary,Deadline,interview,Information , Otherbenefits  );
-                    databaseReference.child(key).setValue(dataSet);
+                    String Uniqekey = databaseReference.push().getKey();
+//                    String jobTitle, String jobtype, String location, String salary, String deadline, String interviewdate, String jobinformation, String otherbenefits, String uniqekey
+
+                        DataSet dataSet = new DataSet(jobTitle,spinnervalue,Location,Salary,Deadline,interview,Information , Otherbenefits , Uniqekey );
+                    databaseReference.child(Uniqekey).setValue(dataSet);
 
                     Intent intent = new Intent(getApplicationContext(), adminOptions.class);
                     startActivity(intent);

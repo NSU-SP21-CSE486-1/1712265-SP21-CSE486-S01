@@ -9,11 +9,12 @@ public class DataSet {
     private String interviewdate;
     private String jobinformation;
     private String otherbenefits;
+    private String uniqekey;
 
     public DataSet() {
     }
 
-    public DataSet(String jobTitle, String jobtype, String location, String salary, String deadline, String interviewdate, String jobinformation, String otherbenefits) {
+    public DataSet(String jobTitle, String jobtype, String location, String salary, String deadline, String interviewdate, String jobinformation, String otherbenefits, String uniqekey) {
         this.jobTitle = jobTitle;
         this.jobtype = jobtype;
         this.location = location;
@@ -22,9 +23,8 @@ public class DataSet {
         this.interviewdate = interviewdate;
         this.jobinformation = jobinformation;
         this.otherbenefits = otherbenefits;
+        this.uniqekey = uniqekey;
     }
-//    jobTitle,spinnervalue,Location,Salary,Information,Otherbenefits, Deadline,interview
-
 
     public String getJobTitle() {
         return jobTitle;
@@ -89,6 +89,13 @@ public class DataSet {
     public void setOtherbenefits(String otherbenefits) {
         this.otherbenefits = otherbenefits;
     }
-}
 
+    public String getUniqekey() {
+        return uniqekey;
+    }
+
+    public void setUniqekey(String uniqekey) {
+        this.uniqekey = uniqekey;
+    }
+}
 
