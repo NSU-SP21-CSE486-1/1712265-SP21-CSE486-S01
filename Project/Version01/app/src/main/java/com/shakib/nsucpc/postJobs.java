@@ -51,13 +51,8 @@ public class postJobs extends AppCompatActivity implements  AdapterView.OnItemSe
         submit= findViewById(R.id.submitJobpostID);
 
 
-            databaseReference = FirebaseDatabase.getInstance().getReference();
-
-
-
-
+            databaseReference = FirebaseDatabase.getInstance().getReference("Jobs");
             jobType.setOnItemSelectedListener(this);
-
             //Creating the ArrayAdapter instance having the country list
             ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,jobtypes);
             aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -65,27 +60,16 @@ public class postJobs extends AppCompatActivity implements  AdapterView.OnItemSe
             jobType.setAdapter(aa);
 
 
-
-
-
-
-
-
-
-
-
             submit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
-
 
                     String jobTitle = jobTitile.getText().toString();
                     String Location = location.getText().toString();
                     String Salary = salary.getText().toString();
 
-                    String Information = jobTitile.getText().toString();
-                    String Otherbenefits = jobTitile.getText().toString();
+                    String Information = jobInformation.getText().toString();
+                    String Otherbenefits = otherBenefits.getText().toString();
                     String spinnervalue = jobType.getSelectedItem().toString();
 
 //           int deadlinedate =  deadlineDate.getDayOfMonth();
@@ -97,6 +81,7 @@ public class postJobs extends AppCompatActivity implements  AdapterView.OnItemSe
                     stringBuilder.append(deadlineDate.getDayOfMonth()+"/");
                     stringBuilder.append(deadlineDate.getMonth()+"/");
                     stringBuilder.append(deadlineDate.getYear());
+
                     String Deadline= stringBuilder.toString();
 
 //            int interviewdate =interviewDate.getDayOfMonth();
@@ -104,10 +89,9 @@ public class postJobs extends AppCompatActivity implements  AdapterView.OnItemSe
 //            int interviewyear =  interviewDate.getYear();
 
                     StringBuilder stringBuilder2 = new StringBuilder();
-
-                    stringBuilder.append(interviewDate.getDayOfMonth()+"/");
-                    stringBuilder.append(interviewDate.getMonth()+"/");
-                    stringBuilder.append(interviewDate.getYear());
+                    stringBuilder2.append(interviewDate.getDayOfMonth()+"/");
+                    stringBuilder2.append(interviewDate.getMonth()+"/");
+                    stringBuilder2.append(interviewDate.getYear());
                     String interview= stringBuilder2.toString();
 
 
@@ -116,8 +100,11 @@ public class postJobs extends AppCompatActivity implements  AdapterView.OnItemSe
 
                     databaseReference = FirebaseDatabase.getInstance().getReference();
 
-                    DataSet dataSet = new DataSet(jobTitle,spinnervalue,Location,Salary,Information,Otherbenefits, Deadline,interview );
-                    databaseReference.child(spinnervalue).setValue(dataSet);
+                    String key = databaseReference.push().getKey();
+//                    (String jobTitle, String jobtype, String location, String salary, String deadline, String interviewdate, String jobinformation, String otherbenefits) {
+
+                        DataSet dataSet = new DataSet(jobTitle,spinnervalue,Location,Salary,Deadline,interview,Information , Otherbenefits  );
+                    databaseReference.child(key).setValue(dataSet);
 
                     Intent intent = new Intent(getApplicationContext(), adminOptions.class);
                     startActivity(intent);
