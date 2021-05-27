@@ -91,14 +91,75 @@
                 android:textColor="@color/black"
                 android:textSize="15dp"
                 />
+
             <TextView
-                android:id="@+id/keyID"
+                android:id="@+id/interviewpreviewID"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:drawableStart="@drawable/ic_baseline_date_range_24"
+                android:ems="20"
                 android:visibility="invisible"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:text="Location"
-
+                android:textColor="@color/black"
+                android:textSize="15dp"
                 />
+
+            <TextView
+                android:id="@+id/jobInformationpreviewID"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:drawableStart="@drawable/ic_baseline_date_range_24"
+                android:ems="20"
+                android:visibility="invisible"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="Location"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                />
+
+
+            <TextView
+                android:id="@+id/otherBenefitpreviewID"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:drawableStart="@drawable/ic_baseline_date_range_24"
+                android:ems="20"
+                android:visibility="invisible"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="Location"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                />
+
+<!--            <TextView-->
+<!--                android:id="@+id/interviewViewID"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="interview"-->
+
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/informationViewID"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Location"-->
+
+<!--                />-->
+<!--            <TextView-->
+<!--                android:id="@+id/otherbenefitViewID"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Location"-->
+
+<!--                />-->
+
 
 
 

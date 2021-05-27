@@ -11,7 +11,29 @@ public class DataSet {
     private String otherbenefits;
     private String uniqekey;
 
-    public DataSet() {
+
+    private String email;
+    private String password;
+
+
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public DataSet(String email, String password) {
     }
 
     public DataSet(String jobTitle, String jobtype, String location, String salary, String deadline, String interviewdate, String jobinformation, String otherbenefits, String uniqekey) {

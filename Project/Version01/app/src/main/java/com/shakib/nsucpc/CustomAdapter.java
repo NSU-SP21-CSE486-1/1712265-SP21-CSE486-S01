@@ -41,7 +41,11 @@ public class CustomAdapter extends ArrayAdapter<DataSet> {
         TextView deadline = view.findViewById(R.id.deadlineViewID);
         TextView type = view.findViewById(R.id.jobtypeID);
 
-        TextView key = view.findViewById(R.id.keyID);
+        TextView info = view.findViewById(R.id.jobInformationpreviewID);
+        TextView benefit = view.findViewById(R.id.otherBenefitpreviewID);
+        TextView interview = view.findViewById(R.id.interviewpreviewID);
+
+
 
 
 
@@ -50,7 +54,12 @@ public class CustomAdapter extends ArrayAdapter<DataSet> {
         title.setText(dataSet.getJobTitle());
         type.setText(dataSet.getJobtype());
         deadline.setText(dataSet.getDeadline());
-        key.setText(dataSet.getUniqekey());
+        info.setText(dataSet.getJobinformation());
+        benefit.setText(dataSet.getOtherbenefits());
+        interview.setText(dataSet.getInterviewdate());
+
+
+
 
 
 

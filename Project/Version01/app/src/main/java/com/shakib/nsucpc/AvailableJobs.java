@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,10 +27,6 @@ public class AvailableJobs extends AppCompatActivity {
 
     private List<DataSet> dataSetList;
     private  CustomAdapter customAdapter;
-    private EditText jobTitile;
-    private TextView key;
-
-
 
 
 
@@ -46,7 +41,7 @@ public class AvailableJobs extends AppCompatActivity {
 
         listView = findViewById(R.id.listviewID);
 
-        key = findViewById(R.id.keyID);
+
 
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -54,12 +49,31 @@ public class AvailableJobs extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                // TODO Auto-generated method stub
-                String contactId = ((TextView) view.findViewById(R.id.keyID)).getText().toString();
+
+                String key = ((TextView) view.findViewById(R.id.showJobTitleID)).getText().toString();
+                String key2 = ((TextView) view.findViewById(R.id.jobtypeID)).getText().toString();
+                String key3 = ((TextView) view.findViewById(R.id.locationViewID)).getText().toString();
+                String key4 = ((TextView) view.findViewById(R.id.salaryViewID)).getText().toString();
+                String key5 = ((TextView) view.findViewById(R.id.deadlineViewID)).getText().toString();
+                String key6 = ((TextView) view.findViewById(R.id.interviewpreviewID)).getText().toString();
+                String key7 = ((TextView) view.findViewById(R.id.jobInformationpreviewID)).getText().toString();
+                String key8 = ((TextView) view.findViewById(R.id.otherBenefitpreviewID)).getText().toString();
 
 
-                Toast.makeText(getApplicationContext(),contactId, Toast.LENGTH_SHORT).show();
+
+
+                Toast.makeText(getApplicationContext(),key, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(AvailableJobs.this, fullJobPreview.class);
+                intent.putExtra("jobtitle",key);
+                intent.putExtra("jobtype",key2);
+                intent.putExtra("jobsalary",key4);
+                intent.putExtra("joblocation",key3);
+                intent.putExtra("interview",key6);
+                intent.putExtra("deadline",key5);
+                intent.putExtra("information",key7);
+                intent.putExtra("otherbenefits",key8);
+
+
                 startActivity(intent);
 
             }
@@ -74,7 +88,7 @@ public class AvailableJobs extends AppCompatActivity {
                 dataSetList.clear();
                 for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
                     DataSet dataSet = dataSnapshot1.getValue(DataSet.class);
-                    String myParentKey = dataSnapshot1.getKey().toString();
+//                    String myParentKey = dataSnapshot1.getKey().toString();
                     dataSetList.add(dataSet);
                 }
                 listView.setAdapter(customAdapter);
