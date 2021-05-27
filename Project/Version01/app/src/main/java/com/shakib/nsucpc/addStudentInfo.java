@@ -21,7 +21,10 @@ public class addStudentInfo extends AppCompatActivity implements AdapterView.OnI
     private TextView singinTextview;
 
     private ProgressBar progressbar;
-    DatabaseReference databaseReference;
+    DatabaseReference databaseReference1;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,21 +36,35 @@ public class addStudentInfo extends AppCompatActivity implements AdapterView.OnI
         singinTextview = findViewById(R.id.signInTextViewID);
 
 
-    singupButton.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            databaseReference = FirebaseDatabase.getInstance().getReference("Student");
-            String Uniqekey = databaseReference.push().getKey();
-            String email = singupEmail.getText().toString();
-            String password = singupPassword.getText().toString();
 
-            DataSet dataSet = new DataSet(email, password );
-            databaseReference.child((Uniqekey)).setValue(dataSet);
-            Intent intent = new Intent(getApplicationContext(), adminOptions.class);
-            startActivity(intent);
+        singinTextview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), adminOptions.class);
+                startActivity(intent);
+            }
+        });
 
-        }
-    });
+        singupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String email = singupEmail.getText().toString();
+                String password = singupPassword.getText().toString();
+
+                databaseReference1 = FirebaseDatabase.getInstance().getReference("Students");
+
+                String Uniqekey = databaseReference1.push().getKey();
+//
+                Student student = new Student(email,password);
+                databaseReference1.child(Uniqekey).setValue(student);
+
+                Intent intent = new Intent(getApplicationContext(), adminOptions.class);
+                startActivity(intent);
+
+
+            }
+        });
 
 }
 
